@@ -1,17 +1,17 @@
-class Core
-  def left_tile
+module TileCheck
+  def tile_left
     [y, x - 1]
   end
 
-  def right_tile
+  def tile_right
     [y, x + 1]
   end
 
-  def up_tile
+  def tile_up
     [y - 1, x]
   end
 
-  def down_tile
+  def tile_down
     [y + 1, x]
   end
 end
