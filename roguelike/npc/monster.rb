@@ -2,7 +2,7 @@ class Monster
   include Movement
   include TileCheck
 
-  %i[x y can_move_tiles symbol map].each do |el|
+  %i[x y can_move_tiles symbol map attack hp].each do |el|
     attr_accessor el
   end
 
@@ -15,7 +15,7 @@ class Monster
     Object.const_get(Constants::MONSTER_TYPES.sample).new(@gen_coords, map)
   end
 
-  def initialize
-    @can_move_tiles = %w[.]
+  def attack(player)
+    player.hp -= self.attack
   end
 end

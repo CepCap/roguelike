@@ -29,12 +29,13 @@ class Core < Gosu::Window
 
     @npcs.each do |npc|
       @map.get_actors(@actors)
-      npc.take_action(@actors)
+      npc.take_action(@player)
     end
   end
 
   def draw
     @logger.draw_log
+    @logger.clear_logs
     @map.draw_body
   end
 end

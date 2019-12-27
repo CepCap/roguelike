@@ -1,5 +1,4 @@
 module Constants
-
   MONSTER_TYPES = %w[Goblin].freeze
 
   FONT = 'font/press_start.ttf'.freeze
